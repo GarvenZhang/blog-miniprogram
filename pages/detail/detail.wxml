@@ -1,0 +1,54 @@
+<!-- /*
+ * 
+ * WordPres版微信小程序
+ * author: NiZerin
+ * organization: 张益铭的个人博客 www.iacblog.com
+ * github:    https://github.com/CrazyNing98/WeChatMiniProgram-Blog
+ * 技术支持微信号：NINGCZ19980501
+ * 开源协议：MIT
+ *Copyright (c) 2017 https://www.iacblog.com/ All rights reserved.
+ * 
+ */ -->
+<import src="../../wxParse/wxParse.wxml" />
+<import src="../../templates/copyright.wxml" />
+<import src="../../templates/loading.wxml" />
+<import src="../../templates/modal-view/modal-view.wxml" />
+<import src="../../templates/login-popup.wxml" />
+<view class="detail-page">
+  <view class="header">
+    <text>{{article.title}}</text>
+  </view>
+  <view class="aside">
+    <view>
+      <text>作者: {{article.author}}</text>
+      <text>评论数: {{article.commentNum}}</text>
+    </view>
+    <view>
+      <text>总字数: {{article.totalNum}}</text>
+      <text>浏览数: {{article.readNum}}</text>
+    </view>
+    <view>
+      <text>写作时间: {{article.time}}</text>
+    </view>
+  </view>
+  <view class="main">
+    <text class="content">{{article.content}}</text>
+  </view>
+  <view class="footer">
+    <view class="comment-area">
+      <view class="title">
+        <text>评论区</text>
+      </view>
+      <view class="comment-list">
+        <block wx:key='id' wx:for="{{commentList}}">
+          <view class="comment-item">
+            <view class="item-hd">
+              <text>{{item.reviewer}} 于 {{item.time}} 发表评论:</text>
+            </view>
+            <view class="item-bd">{{item.content}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

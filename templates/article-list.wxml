@@ -1,0 +1,27 @@
+<template name="tempCommonList">
+  <view class="article-list">
+    <block wx:key="id" wx:for="{{postsList}}">
+      <view class="article-item has-img" index="{{index}}" id="{{item.id}}" bindtap="redictDetail">
+        <view class="item-hd">
+          <view class="item-title">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="item-readnum">
+            <text>{{item.readNum}}人阅读</text>
+          </view>
+          <view class="item-time">
+            <text>{{item.time}}</text>
+          </view>
+        </view>
+        <view class="item-bd">
+          <view class="item-desc">
+            <text>{{item.desc}}</text>
+          </view>
+          <view class="item-cover">
+            <image src="{{item.img.src}}" alt=""/>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</template>

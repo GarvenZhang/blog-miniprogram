@@ -1,0 +1,14 @@
+<template name="tempCommonList">
+  <view class="common-list">
+    <block wx:key="id" wx:for="{{postsList}}">
+      <view class="list-item has-img" index="{{index}}" id="{{item.id}}" bindtap="redictDetail">
+        <view class="content-title">
+          <text>{{item.title}}</text>
+        </view>
+        <view class="content-desc">
+          <text>{{item.desc}}</text>
+        </view>
+      </view>
+    </block>
+  </view>  
+</template>

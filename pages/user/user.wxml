@@ -1,0 +1,46 @@
+<!--
+/*
+ * 
+ * WordPres版微信小程序
+ * author: NiZerin
+ * organization: 张益铭的个人博客 www.iacblog.com
+ * github:    https://github.com/CrazyNing98/WeChatMiniProgram-Blog
+ * 技术支持微信号：NINGCZ19980501
+ * 开源协议：MIT
+ * Copyright (c) 2017 https://www.iacblog.com/ All rights reserved.
+ *
+ */-->
+
+<import src="../../templates/copyright.wxml" />
+<import src="../../templates/login-popup.wxml" />
+
+<view class="info-page">
+  <view class="info-hd">
+    <image class="avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="nickname">{{userInfo.nickname}}</text>
+  </view>
+  <view class="info-bd">
+    <view class="info-item">
+      <text>{{userInfo.university}}</text>
+    </view>
+    <view class="info-item">
+      <text>{{userInfo.profession}}</text>
+    </view>
+    <view class="info-item">
+      <text>{{userInfo.eduction}}</text>
+    </view>
+    <view class="info-item">
+      <text>{{userInfo.email}}</text>
+    </view>
+    <view class="info-item">
+      <navigator url="{{userInfo.github}}">github</navigator>
+    </view>
+    <view class="info-item">
+      <navigator url="{{userInfo.resume}}">resume</navigator>
+    </view>
+  </view>
+    
+  <view class="copyright" style="display:{{floatDisplay}}">
+    <template is="tempCopyright" />
+  </view>
+</view>
